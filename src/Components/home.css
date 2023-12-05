@@ -1,0 +1,14 @@
+/* Home.css */
+.home-container {
+    background-color: #d81515; /* Replace with your desired color */
+    padding: 50px; /* Example padding */
+  }
+  .homes-container {
+    background-color: rgb(35, 116, 209); /* Replace with your desired color */
+    padding: 20px; /* Example padding */
+    
+  }
+
+  .hello-text {
+    color: white; /* Change this to the color you desire */
+  }
