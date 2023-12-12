@@ -29,11 +29,20 @@ function LogIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    const email = data.get('email'); // Retrieve the 'email' value from form data
     console.log({
       email: data.get('email'),
       password: data.get('password'),
     });
-    navigate('/home')
+
+    if (email === 'user1') {
+      navigate('/home')
+    } else if (email === 'user2') {
+      navigate('/user2/main');
+    } else if (email === 'user3') {
+    
+      navigate('/user3/dashboard');
+    }
   };
 
   const StyledImage = styled('img')({

@@ -62,7 +62,6 @@ export default function EditForm( {edit,handleEdit} ) {
     handleEdit(false)
   };
 
-  console.log(edit,21);
   const classes = useStyles();
 
   return (

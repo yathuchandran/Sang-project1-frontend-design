@@ -59,7 +59,6 @@ import {  makeStyles } from '@material-ui/core';
 
 function StyledTreeItem(props) {
  // const classes = useTreeItemStyles(props);
-  console.log(props,59,"tree");
   const { labelText, labelIcon: LabelIcon, ...other } = props;
 
   return (

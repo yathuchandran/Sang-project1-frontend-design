@@ -63,7 +63,6 @@ export default function Group({ groupss, actionss }) {
     actionss(false);
   };
 
-  console.log(groupss, actionss, "group 52");
   const classes = useStyles();
 
   return (

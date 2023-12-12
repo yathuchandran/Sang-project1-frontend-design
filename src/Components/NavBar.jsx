@@ -26,6 +26,7 @@ function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  
 
   const handleProductClick = (e) => {
     e.preventDefault();
@@ -52,16 +53,18 @@ function NavBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
-  
+
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
   return (
-<AppBar position="static" sx={{ bgcolor: '#8C99E0',  boxShadow: "5px 5px 15px rgba(0, 0, 0, 0.8)", marginBottom: '3px', }}>
+    <>
+    <AppBar position="static" sx={{ bgcolor: '#0583D2', boxShadow: "5px 5px 15px rgba(0, 0, 0, 0.6)", marginBottom: '3px', }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Avatar alt="Logo" src={sang_logo} sx={{ mr: 2, width: 60, height: 60}} />
+
+          <Avatar alt="Logo" src={sang_logo} sx={{ mr: 2, width: 60, height: 60 }} />
 
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -118,11 +121,11 @@ function NavBar() {
               aria-controls="master-menu"
               aria-haspopup="true"
               onClick={handleClick}
-              variant="#8C99E0"
+              variant="#00498E"
               sx={{
                 mr: 0,
-                bgcolor: '#8C99E0',
-                color: 'white', 
+                bgcolor: '#0583D2',
+                color: 'white',
               }}
             >
               Master
@@ -144,31 +147,31 @@ function NavBar() {
             </Menu>
 
             <Button
-               variant="#8C99E0"
-               sx={{
-                 mr: 0,
-                 bgcolor: '#8C99E0',
-                 color: 'white', 
-               }}
+              variant="#00498E"
+              sx={{
+                mr: 0,
+                bgcolor: '#0583D2',
+                color: 'white',
+              }}
             >
               FINANCIALS
             </Button>
             <Button
-              variant="#8C99E0"
+              variant="#00498E"
               sx={{
                 mr: 0,
-                bgcolor: '#8C99E0',
-                color: 'white', 
+                bgcolor: '#0583D2',
+                color: 'white',
               }}
             >
               REPORTS
             </Button>
             <Button
-              variant="#8C99E0"
+              variant="#0583D2"
               sx={{
                 mr: 0,
-                bgcolor: '#8C99E0',
-                color: 'white', 
+                bgcolor: '#0583D2',
+                color: 'white',
               }}
             >
               SETTING
@@ -215,6 +218,7 @@ function NavBar() {
       </Container>
     </AppBar>
 
+      </>
 
   )
 }

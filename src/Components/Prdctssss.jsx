@@ -36,6 +36,10 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import ControlledTreeView from './Tree'
 // import Product from './Product'
+import GroupsIcon from '@mui/icons-material/Groups';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import HomeIcon from '@mui/icons-material/Home';
+
 const rows = [
   {
     id: 1,
@@ -95,10 +99,6 @@ function getComparator(order, orderBy) {
     : (a, b) => -descendingComparator(a, b, orderBy);
 }
 
-// Since 2020 all major browsers ensure sort stability with Array.prototype.sort().
-// stableSort() brings sort stability to non-modern browsers (notably IE11). If you
-// only support modern browsers you can replace stableSort(exampleArray, exampleComparator)
-// with exampleArray.slice().sort(exampleComparator)
 function stableSort(array, comparator) {
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
@@ -356,7 +356,7 @@ function EnhancedTableToolbar(props) {
 
         <Typography
           sx={{ flex: '1 1 100%',
-          color: 'white',
+          // color: 'white',
         }}
           variant="h6"
           id="tableTitle"
@@ -367,66 +367,47 @@ function EnhancedTableToolbar(props) {
 
 
         <Tooltip title="new">
-        <IconButton sx={buttonStyle} >
-            <AddIcon />
+                    <IconButton  >
+                        <AddIcon onClick={values} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Group">
+                    <IconButton >
+                        <GroupsIcon onClick={handleGroupButtonClick} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Add Group">
+                    <IconButton >
+                        <GroupAddIcon onClick={handleAddgroup} />
+                    </IconButton>
+                </Tooltip>
 
-            <Typography variant="body2" sx={{ ml: 0, color: 'white' }} onClick={values}>New</Typography>
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Group">
-        <IconButton sx={buttonStyle}>
-            <AddIcon />
-            <Typography variant="body2" onClick={handleGroupButtonClick}>Group</Typography>
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Add Group">
-        <IconButton sx={{
-            borderRadius: '45px',
-            backgroundColor: '#616eb1',
-            color: 'white',
-            width: '120px',
-            height: '30px',
-          }}>
-            <AddIcon />
-            <Typography variant="body2" onClick={handleAddgroup}>Add Group</Typography>
-          </IconButton>
-        </Tooltip>
-
-        <Tooltip title="Export">
-        <IconButton sx={buttonStyle}>
-            <LocalPrintshopIcon />
-            <Typography variant="body2" onClick={onClickExport}>Export</Typography>
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Edit">
-        <IconButton sx={buttonStyle}>
-            <EditIcon />
-            <Typography variant="body2" onClick={handleEditButtonClick} >Edit</Typography>
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Property">
-        <IconButton sx={buttonStyle}>
-            <ViewListIcon />
-            <Typography variant="body2" onClick={handlePropertyButtonClick}>Property</Typography>
-          </IconButton>
-        </Tooltip>
-        <Tooltip title="Delete">
-        <IconButton sx={buttonStyle}>
-            <DeleteIcon />
-            <Typography variant="body2" onClick={handleDeleteButtonClick}>Delete</Typography>
-          </IconButton>
-        </Tooltip>
+                <Tooltip title="Export">
+                    <IconButton >
+                        <LocalPrintshopIcon onClick={onClickExport} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Edit">
+                    <IconButton >
+                        <EditIcon onClick={handleEditButtonClick} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Property">
+                    <IconButton >
+                        <ViewListIcon onClick={handlePropertyButtonClick} />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="Delete">
+                    <IconButton >
+                        <DeleteIcon onClick={handleDeleteButtonClick} />
+                    </IconButton>
+                </Tooltip>
         <Tooltip title="Close">
-        <IconButton sx={buttonStyle}>
-            <CloseIcon />
-            <Typography variant="body2" onClick={onClickClose}>Close</Typography>
+        <IconButton >
+            <HomeIcon  onClick={onClickClose} />
           </IconButton>
         </Tooltip>
-        <Tooltip title="Filter list">
-          <IconButton>
-            <FilterListIcon />
-          </IconButton>
-        </Tooltip>
+       
       </Toolbar>
     </>
   );
@@ -547,10 +528,10 @@ export default function EnhancedTable(props) {
   return (
     <>
       <Box sx={{ width: '100%' }}>
-        <Paper sx={{backgroundColor:'#8C99E0'}}>
+        <Paper sx={{backgroundColor:'#FBFAF5'}}>
         <EnhancedTableToolbar numSelected={selected.length}
           handleExportToExcel={handleExportToExcel} />
-        </Paper>
+        
       
         <Box sx={{ display: 'flex', width: '99%' }}>
           <Box sx={{ width: '100%', paddingLeft: 5 }}>
@@ -685,6 +666,7 @@ export default function EnhancedTable(props) {
 
           </Box>
         </Box>
+        </Paper>
       </Box>
 
     </>
