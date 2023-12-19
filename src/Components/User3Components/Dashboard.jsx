@@ -25,6 +25,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import {  Menu, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../Footer'
 
 function Copyright() {
     return (
@@ -50,7 +51,7 @@ export default function Album() {
     const navigate=useNavigate()
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-        setText('MASTERS');
+        navigate('/user3/basepage')
     };
 
     const handleClose = () => {
@@ -64,6 +65,9 @@ export default function Album() {
         // Redirect to the product page here
         // history.push('/product'); // Replace '/product' with the actual URL of your product page
     };
+    const onClickLog = () => {
+        navigate('/')
+    }
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
@@ -77,7 +81,7 @@ export default function Album() {
                 </Box>
                 <Box sx={{ flexGrow: 0, }}>
                     <SettingsIcon sx={{ marginRight: '20px' }} />
-                    < PowerSettingsNewIcon sx={{ marginRight: '20px' }} />
+                    < PowerSettingsNewIcon sx={{ marginRight: '20px' }} onClick={onClickLog} />
                 </Box>
             </Toolbar>
             {/* </AppBar> */}
@@ -105,7 +109,7 @@ export default function Album() {
                                 Sang Solutions
                             </Typography>
                         </Grid>
-                        <Typography variant="h6" align="center" color="text.secondary" paragraph>
+                       <Typography variant="h6" align="center" color="text.secondary" paragraph>
                             Something short and leading about the collection below—its contents,
                         </Typography>
                     </Container>
@@ -126,7 +130,7 @@ export default function Album() {
                                 }}                                    onClick={handleClick}
                                 />
                                 <Button sx={{ color: 'black' }}  onClick={handleClick}>MASTERS</Button>
-                                {text === 'MASTERS' && (
+                                {/* {text === 'MASTERS' && (
                                     <Menu
                                         id="master-menu"
                                         anchorEl={anchorEl}
@@ -150,7 +154,7 @@ export default function Album() {
                                         <MenuItem onClick={handleClose}>Company</MenuItem>
                                         <MenuItem onClick={handleClose}>Unit</MenuItem>
                                     </Menu>
-                                )}
+                                )} */}
 
                             </Card>
                         </Grid>
@@ -218,6 +222,7 @@ export default function Album() {
         <Copyright />
       </Box> */}
             {/* End footer */}
+            <Footer/>
         </ThemeProvider>
     );
 }

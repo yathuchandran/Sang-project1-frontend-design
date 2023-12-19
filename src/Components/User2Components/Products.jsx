@@ -37,6 +37,7 @@ import Swal from 'sweetalert2';
 import ControlledTreeView from '../Tree'
 import GroupsIcon from '@mui/icons-material/Groups';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 // import Product from './Product'
 const rows = [
     {
@@ -436,6 +437,7 @@ export default function EnhancedTable({ drawerOpen }) {
     //////////////////////////////////////////////////////////////
     const [searchTerm, setSearchTerm] = React.useState(''); // New state for search term
     const [visibleRows, setVisibleRows] = React.useState([]);
+    const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
 
     // const storedDrawerWidth = localStorage.getItem("drawerWidth") || "100%"; 
@@ -541,31 +543,34 @@ export default function EnhancedTable({ drawerOpen }) {
     };
 
 
-    // console.log(selected,430);
+    const toggleSidebar = () => {
+        setSidebarOpen(!sidebarOpen);
+    };
+    const productPaperWidth = sidebarOpen ? '22%' : '0%';
     return (
         <>
-            <Box sx={{ width: '100%', marginTop: 5,  display: "flex", justifyContent: "flex-end", flexDirection: "row", }}>
+            <Box sx={{ width: '100%', marginTop: 5, display: "flex", justifyContent: "flex-end", flexDirection: "row", }}>
 
 
-                <Box sx={{ display: 'flex', width: '22%', justifyContent: "flex-end", marginRight: 1 }}>
-                    {/* <Box > */}
+                <Box sx={{ display: 'flex', width: productPaperWidth, justifyContent: 'flex-end', marginRight: 1 }}>
                     <Paper
                         sx={{
-                            width: '90%', // Adjust width as needed
-                            height: '320px', // Adjust height as needed
-                            padding: '11px', // Add padding if necessary
-                            border: '1px solid #e0e0e0', // Border color and width
-                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)', // Shadow definition
-                        }}>
+                            width: '90%',
+                            height: '320px',
+                            padding: '11px',
+                            border: '1px solid #e0e0e0',
+                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
+                            display: sidebarOpen ? 'block' : 'none', // Toggle display based on sidebarOpen state
+                        }}
+                    >
                         <Typography>Product</Typography>
                         <ControlledTreeView />
                     </Paper>
-                    {/* </Box> */}
                 </Box>
 
 
 
-                <Box sx={{ width:  '90%'  }}>
+                <Box sx={{ width: '100%' }}>
 
 
                     <Paper sx={{
@@ -573,6 +578,13 @@ export default function EnhancedTable({ drawerOpen }) {
                         border: '1px solid #e0e0e0', // Border color and width
                         boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)', // Shadow definition
                     }}>
+
+                        <Grid sx={{margin:'2%',marginBottom:'0%', marginTop:'1%'}}>
+                            <button onClick={toggleSidebar}>
+                                <AccountTreeIcon />Tree 
+                            </button>
+
+                        </Grid>
 
 
                         <EnhancedTableToolbar numSelected={selected.length}

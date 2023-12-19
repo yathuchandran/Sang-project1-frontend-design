@@ -58,6 +58,14 @@ function NavBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const onClickLog = () => {
+    navigate('/')
+}
+
+const handleTransaction=()=>{
+  navigate('/Transaction')
+}
   return (
     <>
     <AppBar position="static" sx={{ bgcolor: '#0583D2', boxShadow: "5px 5px 15px rgba(0, 0, 0, 0.6)", marginBottom: '3px', }}>
@@ -176,13 +184,25 @@ function NavBar() {
             >
               SETTING
             </Button>
+            <Button
+              variant="#0583D2"
+              onClick={handleTransaction}
+
+              sx={{
+                mr: 0,
+                bgcolor: '#0583D2',
+                color: 'white',
+              }}
+            >
+              Transaction
+            </Button>
 
           </Box>
 
 
           <Box sx={{ flexGrow: 0, }}>
             <SettingsIcon sx={{ marginRight: '20px' }} />
-            < PowerSettingsNewIcon sx={{ marginRight: '20px' }} />
+            < PowerSettingsNewIcon sx={{ marginRight: '20px' }} onClick={onClickLog}/>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

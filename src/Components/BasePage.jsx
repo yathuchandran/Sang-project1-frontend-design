@@ -4,6 +4,7 @@ import Prdctssss from "./Prdctssss";
 import Product from "./Product";
 import { Route, Routes, Outlet } from "react-router-dom";
 import Sidebar from './Sidebar'
+import Transaction from "./User1Components/Transaction";
 
 function BasePage({value,user}) {
   return (
@@ -21,7 +22,9 @@ function BasePage({value,user}) {
           <div className="col-12 m-1">
           {value=="product"?(
           <Prdctssss />
-              ):(
+              ):value=="Transaction"?(
+                <Transaction />
+                    ):(
                 " "
               ) }
           </div>

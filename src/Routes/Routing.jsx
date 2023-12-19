@@ -11,9 +11,9 @@ function Home() {
     <Routes>
       <Route path="/" element={<LogIn/>} />
       <Route path="/home" element={<BasePage value={'user1'}/>} />
-      {/* <Route path="/main" element={<BasePage value={'user2'}/>} /> */}
-
         <Route path="/product" element={<BasePage  value={'product'} />} />
+        <Route path="/Transaction" element={<BasePage  value={'Transaction'} />} />
+
         <Route path="/*" element={<Outlet />} />
     </Routes>
   );

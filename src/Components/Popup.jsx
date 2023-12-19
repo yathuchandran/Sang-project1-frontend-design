@@ -69,7 +69,7 @@ export default function FormDialog( {Addnew,newss} ) {
 
   return (
     <React.Fragment>
-      <Dialog open={open} onClose={handleClose} maxWidth="md" >
+      <Dialog open={open} onClose={handleClose} maxWidth="sm" >
         <DialogTitle>Product Details</DialogTitle>
         <DialogActions >
           <Button variant="#4BB5FF"  onClick={handleClose} sx={{backgroundColor:'#4BB5FF',color: 'white'}}>
@@ -87,7 +87,7 @@ export default function FormDialog( {Addnew,newss} ) {
       <Grid container spacing={2}>
 
 
-        <Grid item xs={4}>
+        <Grid item xs={6}>
         
           <TextField
             variant="outlined"
@@ -99,7 +99,7 @@ export default function FormDialog( {Addnew,newss} ) {
             className={classes.customTextField}
             />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             variant="outlined"
             label="Code"
@@ -109,7 +109,7 @@ export default function FormDialog( {Addnew,newss} ) {
             className={classes.customTextField}
             />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             variant="outlined"
             label="AltName"
@@ -120,7 +120,7 @@ export default function FormDialog( {Addnew,newss} ) {
 
           />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
         <TextField
             select
             variant="outlined"
@@ -140,7 +140,7 @@ export default function FormDialog( {Addnew,newss} ) {
 
 
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             variant="outlined"
             label="Vat"
@@ -150,7 +150,7 @@ export default function FormDialog( {Addnew,newss} ) {
             className={classes.customTextField}
             />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             variant="outlined"
             label="Tax"
@@ -160,7 +160,7 @@ export default function FormDialog( {Addnew,newss} ) {
             className={classes.customTextField}
             />
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={6}>
           <TextField
             variant="outlined"
             label="Parent"

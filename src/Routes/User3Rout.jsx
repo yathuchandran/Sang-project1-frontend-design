@@ -4,6 +4,7 @@ import LogIn from '../Components/LogIn';
 import BasePage3 from '../Components/User3Components/BasePage3'
 import  Dashboard  from '../Components/User3Components/Dashboard';
 import Product from '../Components/User3Components/Product';
+import Footer from '../Components/Footer'
 function User3Rout() {
   return (
 <Routes>
@@ -11,6 +12,7 @@ function User3Rout() {
       <Route path="/dashboard" element={<Dashboard />} />
 
         <Route path="/product" element={<Product   />} />
+        <Route path="/basepage" element={<BasePage3   />} />
         <Route path="/*" element={<Outlet />} />
     </Routes>  )
 }

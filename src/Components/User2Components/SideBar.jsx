@@ -91,6 +91,9 @@ function PersistentDrawerLeft() {
         
 
     };
+    const onClickLog = () => {
+        navigate('/')
+    }
     return (
         <>
                       {/* <EnhancedTable drawerOpen={open} /> */}
@@ -123,7 +126,7 @@ function PersistentDrawerLeft() {
 
                     <Box sx={{ flexGrow: 0, }}>
                         <SettingsIcon sx={{ marginRight: '20px' }} />
-                        < PowerSettingsNewIcon sx={{ marginRight: '20px' }} />
+                        < PowerSettingsNewIcon sx={{ marginRight: '20px' }} onClick={onClickLog} />
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>

@@ -41,6 +41,7 @@ import Swal from 'sweetalert2';
 import ControlledTreeView from '../Tree'
 import GroupsIcon from '@mui/icons-material/Groups';
 import GroupAddIcon from '@mui/icons-material/GroupAdd';
+import Footer from '../Footer'
 // import Product from './Product'
 const rows = [
     {
@@ -548,7 +549,7 @@ export default function EnhancedTable(props) {
     // console.log(selected,430);
     return (
         <>
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '100%', }}>
                 <Paper sx={{ backgroundColor: '#D3F0F7', height: '300px' }}>
                     <Product />
                     <EnhancedTableToolbar numSelected={selected.length}
@@ -691,7 +692,7 @@ export default function EnhancedTable(props) {
                     </Box>
                 </Paper>
             </Box>
-
+<Footer />
         </>
     );
 }
