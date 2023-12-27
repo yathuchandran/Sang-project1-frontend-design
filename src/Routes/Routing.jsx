@@ -1,10 +1,7 @@
-// Home.js
 import React from "react";
 import { Route, Routes, Outlet } from "react-router-dom";
 import LogIn from "../Components/LogIn";
 import BasePage from "../Components/BasePage";
-import Product from "../Components/Product";
-import Prdctssss from "../Components/Prdctssss";
 
 function Home() {
   return (

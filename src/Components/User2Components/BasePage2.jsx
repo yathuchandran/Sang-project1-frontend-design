@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from './SideBar'
 import Products from './Products'
+import SubNavbar from '../SubNavbar'
 function BasePage({value,user}) {
   return (
     <>
@@ -15,7 +16,7 @@ function BasePage({value,user}) {
           </div>
           <div className="col-md-2 p-0" >
             <div className="row   "  >
-              <div className="col-8  m-1 " style={{  marginTop:'4rem', }}>
+              <div className="col-8  m-1 " style={{  marginTop:'2rem', }}>
                 {user=="product"?(
                    <Products/>
                 ):("")}

@@ -30,6 +30,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import EnhancedTable from './Products';
+import SubNavbar from '../SubNavbar';
 
 const drawerWidth = 240;
 

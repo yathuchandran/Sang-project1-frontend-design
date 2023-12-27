@@ -72,7 +72,7 @@ export default function Album() {
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
             {/* <AppBar position="relative"> */}
-            <Toolbar>
+            {/* <Toolbar>
                 <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: '' }}>
                     <Avatar alt="Logo" src={sang_logo} sx={{ mr: 2, width: 60, height: 60 }} />
                     <Typography variant="h6" color="inherit" noWrap sx={{ marginTop: '1%' }}>
@@ -83,7 +83,7 @@ export default function Album() {
                     <SettingsIcon sx={{ marginRight: '20px' }} />
                     < PowerSettingsNewIcon sx={{ marginRight: '20px' }} onClick={onClickLog} />
                 </Box>
-            </Toolbar>
+            </Toolbar> */}
             {/* </AppBar> */}
             <main>
                 {/* Hero unit */}

@@ -79,14 +79,7 @@ export default function Album() {
     return (
         <ThemeProvider theme={defaultTheme}>
             <CssBaseline />
-            <NavBar/>
-          
-               
-                <Box sx={{ marginLeft: '90%',marginTop:1 }}>
-                    <SettingsIcon sx={{ marginRight: '20px' }} />
-                    < PowerSettingsNewIcon sx={{ marginRight: '20px' }} onClick={onClickLog} />
-                </Box>
-          
+       
             <main>
                 {/* Hero unit */}
                 <Box
@@ -95,26 +88,7 @@ export default function Album() {
                         pt: 5,
                         pb: 0,
                     }}
-                >
-                    {/* <Container maxWidth="sm" >
-                        <Grid sx={{ display: "flex", justifyContent: "center" }}>
-                            <Avatar alt="Logo" src={sang_logo} sx={{ mr: 2, width: 60, height: 60 }} />
-
-                            <Typography
-                                component="h1"
-                                variant="h4"
-                                align="center"
-                                color="text.primary"
-                                gutterBottom
-                                marginTop='10px'
-                            >
-                                Sang Solutions
-                            </Typography>
-                        </Grid>
-                        <Typography variant="h6" align="center" color="text.secondary" paragraph>
-                            Something short and leading about the collection below—its contents,
-                        </Typography>
-                    </Container> */}
+                >                  
                 </Box>
                 <Container sx={{ py: 8 }} maxWidth="lg">
                   
@@ -232,22 +206,7 @@ export default function Album() {
                     </Grid>
                 </Container>
             </main>
-            {/* Footer */}
-            {/* <Box sx={{ bgcolor: 'background.paper', p: 6 }} component="footer">
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="text.secondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        <Copyright />
-      </Box> */}
-            {/* End footer */}
+           
             <Footer/>
         </ThemeProvider>
     );
